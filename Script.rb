@@ -47,7 +47,7 @@
 if defined?(PluginManager) && !PluginManager.installed?("Set the Time")
   PluginManager.register({                                                 
     :name    => "Set the Time",                                        
-    :version => "1.0",                                                     
+    :version => "1.0.1",                                                     
     :link    => "https://www.pokecommunity.com/showthread.php?t=481401",             
     :credits => "FL",
     :incompatibilities => ["Unreal Time System"]
@@ -194,7 +194,7 @@ module SetTime
     ret = default
     if should_set
       ret = show_input_message(
-        _INTL("Select minutes."),_INTL("(value) minutes?"),0,23,ret
+        _INTL("Select minutes."),_INTL("(value) minutes?"),0,59,ret
       )
     end
     return ret
